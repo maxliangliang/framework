@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" class="no-js" th:charset="utf-8" th:accept-charset="utf-8"
+      th:fragment="index">
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <h1 class="page-header">用户列表</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <!--查询条件-->
+    <div class="row">
+        <div class="col-lg-12" >
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="keyword">关键字</label>
+                    <input type="text" class="form-control" id="keyword" name="keyword" placeholder="" />
+                </div>
+
+                <button type="button" class="form-control btn btn-default"> 查询</button>
+            </form>
+
+
+        </div>
+    </div>
+
+    <!--操作按钮-->
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-md-offset-9 col-lg-offset-9">
+            <button class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 新增
+            </button>
+            <button class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 删除
+            </button>
+        </div>
+
+    </div>
+
+    <!-- 数据显示-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    DataTables Advanced Tables
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <table width="100%" class="table table-striped table-bordered table-hover table-responsive" id="dataTables">
+                        <!--<thead>-->
+                            <!--<tr>-->
+                                <!--<th>-->
+                                    <!--<div class="checkbox">-->
+                                        <!--<label>-->
+                                            <!--<input type="checkbox" id="checkbox"/>-->
+                                        <!--</label>-->
+                                    <!--</div>-->
+                                <!--</th>-->
+                                <!--<th>姓名</th>-->
+                                <!--<th>邮箱</th>-->
+                                <!--<th>联系方式</th>-->
+                                <!--<th>地址</th>-->
+                                <!--<th>描述</th>-->
+                                <!--<th>是否可用</th>-->
+                                <!--<th>操作</th>-->
+                            <!--</tr>-->
+                        <!--</thead>-->
+                        <!--<tbody id="tbody">-->
+                        <!--</tbody>-->
+                    </table>
+                    <!-- /.table-responsive -->
+
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <!--分页-->
+    <div class="row">
+        <!--分页文字信息-->
+        <div class="col-md-6">
+            当前第 页，总共 页，
+            总共 条记录数
+        </div>
+
+        <!--分页条-->
+
+        <div class="col-md-6">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li><a href="#">首页</a></li>
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+
+                    <!--循环显示的分页栏数-->
+                    <li >
+                        <a href="#" >1</a>
+                    </li>
+
+
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">末页</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+</div>
+<!-- /#page-wrapper -->
+
+<div th:include="/common/tables_js::datatables"></div>
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+
+    $(document).ready(function () {
+        $.ajax({
+            url:"./user/list.do",
+            data:{
+                pageNumber:1,
+                pageSize:1
+            },
+            type:"get",
+            success:function(result){
+                $('#dataTables').DataTable( {
+                    ordering:  false,
+
+                    //使用对象数组，一定要配置columns，告诉 DataTables 每列对应的属性
+                    //data 这里是固定不变的，name，position，salary，office 为你数据里对应的属性
+                    columns: [
+                        { data: "name" },
+                        { data: "position"},
+                        { data: "salary"},
+                        { data: "office"}
+                    ],
+                    data: [
+                        {
+                            "name":       "Tiger Nixon",
+                            "position":   "System Architect",
+                            "salary":     "$3,120",
+                            "start_date": "2011/04/25",
+                            "office":     "Edinburgh",
+                            "extn":       "5421"
+                        },
+                        {
+                            "name":       "Garrett Winters",
+                            "position":   "Director",
+                            "salary":     "$5,300",
+                            "start_date": "2011/07/25",
+                            "office":     "Edinburgh",
+                            "extn":       "8422"
+                        }
+                    ]
+                } );
+            }
+        });
+
+
+    });
+</script>
+</html>

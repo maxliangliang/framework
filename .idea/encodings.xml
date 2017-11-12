@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/admin-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/admin-generator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/admin-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/admin-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/admin-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/admin-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sensitive" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sensitive/sensitive-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sensitive/sensitive-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sensitive/sensitive-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sensitive/sensitive-web" charset="UTF-8" />
+  </component>
+</project>

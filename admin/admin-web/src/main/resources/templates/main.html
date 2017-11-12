@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" class="no-js">
+<head>
+    <div th:include="/common/commonjs::commonjs"></div>
+
+    <div th:include="/common/css::css"></div>
+
+    <title>Gentelella Alela! | </title>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+
+            <!-- topnav-->
+            <div th:include="/common/top::top"></div>
+
+            <!-- sidebar-->
+            <div th:include="/common/sidebarMenu::sidebar"></div>
+        </nav>
+
+        <!-- /sidebar-->
+
+        <!-- page content -->
+
+        <div id="mainframe">
+
+        </div>
+        <!-- /page content -->
+
+    </div>
+
+    <!-- Custom Theme Scripts -->
+    <script th:src="@{/static/js/sbadmin2/sb-admin-2.js}"></script>
+
+    <!-- FastClick -->
+    <script th:src="@{/static/vendors/fastclick/lib/fastclick.js}"></script>
+    <!-- NProgress -->
+    <script th:src="@{/static/vendors/nprogress/nprogress.js}"></script>
+
+    <!-- jQuery custom content scroller -->
+    <script th:src="@{/static/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js}"></script>
+
+    <script type="text/javascript">
+
+        var menuClick = function (menuUrl) {
+            $.get(menuUrl,function (data) {
+                $("#mainframe").empty();
+                //$("#mainframe").html("");
+                $("#mainframe").html(data);
+            });
+        };
+
+        $(function () {
+            $("nav a").each(function () {
+                if(typeof($(this).attr("data-url"))!="undefined"){
+                    $(this).on("click",function () {
+                        menuClick("."+$(this).attr("data-url"));
+                    });
+                }
+            });
+        });
+
+        //页面加载完成之后激活首页
+        $(window).load(function () {
+            menuClick("./index.do");
+        });
+    </script>
+
+</body>
+</html>

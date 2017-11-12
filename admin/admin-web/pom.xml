@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>admin</artifactId>
+        <groupId>com.liang</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>admin-web</artifactId>
+    <packaging>war</packaging>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
+        <dependency>
+            <!-- Import dependency management from Spring Boot -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.liang</groupId>
+            <artifactId>admin-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.penggle</groupId>
+            <artifactId>kaptcha</artifactId>
+
+            <exclusions>
+                <exclusion>
+                    <artifactId>javax.servlet-api</artifactId>
+                    <groupId>javax.servlet</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--防止页面模板在标签不完整的情况下直接报错-->
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+        </dependency>
+
+        <!-- 条形码、二维码生成  -->
+        <!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+        </dependency>
+
+        <!-- image util -->
+        <dependency>
+            <groupId>com.drewnoakes</groupId>
+            <artifactId>metadata-extractor</artifactId>
+        </dependency>
+
+        <!-- Swagger API文档 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.janeluo</groupId>
+            <artifactId>ikanalyzer</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+
+    </build>
+
+</project>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="admin-dao" />
+        <module name="admin-generator" />
+        <module name="admin-pojo" />
+        <module name="admin-service" />
+        <module name="admin-util" />
+        <module name="admin-web" />
+        <module name="common" />
+        <module name="sensitive-dao" />
+        <module name="sensitive-pojo" />
+        <module name="sensitive-service" />
+        <module name="sensitive-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="admin" target="1.8" />
+      <module name="admin-controller" target="1.8" />
+      <module name="admin-dao" target="1.8" />
+      <module name="admin-generator" target="1.8" />
+      <module name="admin-pojo" target="1.8" />
+      <module name="admin-service" target="1.8" />
+      <module name="admin-util" target="1.8" />
+      <module name="admin-web" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="framework" target="1.8" />
+      <module name="sensitive" target="1.8" />
+      <module name="sensitive-dao" target="1.8" />
+      <module name="sensitive-pojo" target="1.8" />
+      <module name="sensitive-service" target="1.8" />
+      <module name="sensitive-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

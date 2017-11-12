@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/admin/admin.iml" filepath="$PROJECT_DIR$/admin/admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin/admin-dao/admin-dao.iml" filepath="$PROJECT_DIR$/admin/admin-dao/admin-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin/admin-generator/admin-generator.iml" filepath="$PROJECT_DIR$/admin/admin-generator/admin-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin/admin-pojo/admin-pojo.iml" filepath="$PROJECT_DIR$/admin/admin-pojo/admin-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin/admin-service/admin-service.iml" filepath="$PROJECT_DIR$/admin/admin-service/admin-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin/admin-util/admin-util.iml" filepath="$PROJECT_DIR$/admin/admin-util/admin-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin/admin-web/admin-web.iml" filepath="$PROJECT_DIR$/admin/admin-web/admin-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/framework.iml" filepath="$PROJECT_DIR$/framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sensitive/sensitive.iml" filepath="$PROJECT_DIR$/sensitive/sensitive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sensitive/sensitive-dao/sensitive-dao.iml" filepath="$PROJECT_DIR$/sensitive/sensitive-dao/sensitive-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sensitive/sensitive-pojo/sensitive-pojo.iml" filepath="$PROJECT_DIR$/sensitive/sensitive-pojo/sensitive-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sensitive/sensitive-service/sensitive-service.iml" filepath="$PROJECT_DIR$/sensitive/sensitive-service/sensitive-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sensitive/sensitive-web/sensitive-web.iml" filepath="$PROJECT_DIR$/sensitive/sensitive-web/sensitive-web.iml" />
+    </modules>
+  </component>
+</project>

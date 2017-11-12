@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: framework
+
+
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+ #指定项目的运行环境,可自动启用或停止某些功能
+  profiles:
+    active: dev
+
+
+server:
+  port: 8080
+  session:
+    timeout: 1800
+  context-path: /framework
